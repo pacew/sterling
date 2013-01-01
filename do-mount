@@ -1,0 +1,1 @@
+smbmount -o user=pace,uid=1001 //atw-pc/condor /condor

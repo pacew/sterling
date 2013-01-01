@@ -1,0 +1,5 @@
+#! /bin/sh
+
+rsync -av Textures/. /condor/Landscapes/Sterling/Working/Textures/.
+
+echo "now run the landscape editor and do File -> Export Textures to DDS"

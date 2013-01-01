@@ -1,0 +1,51 @@
+mkdir /windows/Sterling
+chmod 777 /windows/Sterling
+cp ~/sterling-data/srtm/*.hgt /windows/Sterling
+
+run "Condor 3DEM"
+open all the hgt files
+patch missing 
+change projection to UTM WGS84
+select smaller area (mult of 256)
+Geo coordinates -> decimal degrees
+file -> save terrain matrix -> binary signed integer
+creates Sterling.bin and Sterling.hdr
+cd /windows/Sterling
+cp Sterling.bin Sterling.raw
+
+run RawToTrn
+notice is asks for width/height (reverse order from rows/cols)
+load, save to /windows/Sterling/Sterling.trn
+
+
+
+run Landscape editor
+create new scenery
+Save Landscape
+exit
+
+cp Calibration\ Tools... /windows/Sterling/calibrate.xls
+libreoffice calibrate.xls (on linux or windows)
+calibrate producing CalibrationPoints.csv..csv ... put in 
+/condor/Landscape/Sterling/Working/CalibrationPoints.csv
+
+
+run landscale editor
+check Calibration points
+should see list of calibration points
+click Calibrate button
+lat/lon in status bar should change to good numbers
+
+save other landscape editor stuff
+
+airport
+name: Sterling 3B3
+lat 42.424999
+lon -71.793999
+alt 137
+dir 320
+len 700
+width 12
+Save Landscape
+
+test fly

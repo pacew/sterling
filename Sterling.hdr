@@ -1,0 +1,14 @@
+file_title             = Sterling
+data_format            = int16
+map_projection         = UTM Zone 19N
+ellipsoid              = WGS84
+left_map_x             = 183060
+lower_map_y            = 4649760
+right_map_x            = 344250
+upper_map_y            = 4857030
+number_of_rows         = 2304
+number_of_columns      = 1792
+elev_m_unit            = meters
+elev_m_minimum         = -16
+elev_m_maximum         = 1267
+elev_m_missing_flag    = -9999
